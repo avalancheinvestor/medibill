@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-moz-scrollbar {
+    width: 10px;
+}
+
+::-moz-scrollbar-thumb {
+    @apply bg-sky-700 rounded-[5px];
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-sky-700 rounded-b-[5px] cursor-pointer;
+}
+
+.route-nav-item {
+    @apply flex flex-row gap-2 h-full items-center justify-center px-3 cursor-pointer
+}
+
+.route-nav-item:hover {
+    @apply bg-blue-900;
+}
+
+.active-route-nav-item {
+    @apply flex flex-row gap-2 h-full items-center justify-center px-3 cursor-pointer bg-blue-950;
+}
+
+.max-width {
+    @apply max-w-[1440px] mx-auto;
+}
+
+@media screen and (max-width:640px) {
+    .padding-x {
+        @apply px-16 px-6;
+    }
+}
+
+.padding-y {
+    @apply py-4;
+}
+
+.flex-center {
+    @apply flex items-center justify-center;
+}
+
+.flex-between {
+    @apply flex justify-between items-center;
+}
+
+.custom-btn {
+    @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
+
+
+/* END: General styles */
+
+
+/* START: Hero styles */
+
+.bord {
+    @apply flex flex-row items-center justify-between bg-sky-600 h-[40px] px-2 cursor-pointer border-b border-slate-300;
+}
+
+.bord:hover {
+    @apply bg-sky-700
+}
+
+.bord:last-child {
+    @apply border-none rounded-b-[10px]
+}
+
+.active-bord {
+    @apply flex flex-row items-center justify-between h-[40px] px-2 cursor-pointer border-b border-slate-300 bg-blue-950
+}
+
+.active-bord:last-child {
+    @apply rounded-b-[10px]
+}
+
+.scheduling-tab-item {
+    @apply flex flex-row gap-2 h-full items-center justify-center px-3 cursor-pointer border border-sky-600 border-b-0 text-black bg-blue-100;
+}
+
+.scheduling-tab-item:hover {
+    @apply bg-sky-600 text-white;
+}
+
+.active-scheduling-tab-item {
+    @apply bg-sky-600 text-white flex flex-row gap-2 h-full items-center justify-center px-3 cursor-pointer border border-sky-600 border-b-0;
+}
+
+
+/* tailwind.css or your custom Tailwind CSS file */
+
+.custom-calendar .react-calendar__month-view__weekdays {
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid steelblue;
+    margin-bottom: .2rem;
+}
+
+.custom-calendar .react-calendar__month-view__weekdays__weekday abbr {
+    color: steelblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.table-cage {
+    height: calc(100vh - 50px - 55px - 50px - 27px);
+}
+
+.sheet-table-cont {
+    height: calc(100vh - 480px);
+}
+
+.cont {
+    height: calc(100vh - 295px);
+}
+
+.cont-2 {
+    height: calc(100vh - 130px);
+}
+
+.fincancial-cont {
+    max-height: calc(100vh - 205px);
+}
+
+.payment-btn {
+    @apply px-3 border border-sky-600 bg-white text-slate-600 text-[14px] border-b-0 h-[30px];
+}
+
+.payment-btn:hover {
+    @apply bg-blue-100
+}
+
+.active-payment-btn {
+    @apply px-3 border border-sky-600 bg-sky-600 text-white text-[14px] border-b-0 h-[30px]
+}
+
+.cont-3 {
+    height: calc(100vh - 189px);
+}
+
+.cont-4 {
+    height: calc(100vh - 120px);
+}
+
+.cont-5 {
+    height: calc(100vh - 135px)
+}
+
+.cont-6 {
+    height: calc(100vh - 360px)
+}
+
+.cont-7 {
+    height: calc(100vh - 250px)
+}
+
+.cont-8 {
+    height: calc(100vh - 170px)
+}
+
+.cont-9 {
+    max-height: calc(130vh)
+}
+
+.cont-10 {
+    height: calc(70vh)
+}
+
+.cont-11 {
+    height: calc(70vh)
+}
+
+.cont-11::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.practice-cont::-webkit-scrollbar-thumb {
+    @apply bg-sky-600;
+}
+
+.cont-side-bar-right {
+    height: calc(100vh - 160px)
+}
+
+.drop-element {
+    @apply flex items-center justify-start px-2 text-sm text-slate-600 h-[30px] w-full bg-white cursor-pointer;
+}
+
+.drop-element:hover {
+    @apply bg-sky-600 text-white;
+}
+
+.drop-element:first-child {
+    @apply rounded-t-[5px]
+}
+
+.drop-element:last-child {
+    @apply rounded-b-[5px]
+}
+
+#calledDate[type="date"]::-webkit-calendar-picker-indicator {
+    @apply text-sky-600 cursor-pointer;
+}
+
+.elem-1 {
+    position: relative;
+}
+
+.elem-1::after {
+    position: absolute;
+    content: '';
+    height: 12px;
+    width: 8px;
+    /* background-color: red; */
+    top: 0;
+    right: -8px;
+    border-bottom: 1px solid gray;
+}
+
+.elem-2 {
+    position: relative;
+}
+
+.elem-2::before {
+    position: absolute;
+    content: '';
+    height: 12px;
+    width: 8px;
+    /* background-color: red; */
+    top: 0;
+    left: -8px;
+    border-bottom: 1px solid gray;
+}
+
+.shortcut-style {
+    @apply flex flex-row items-center justify-between h-[40px] px-2 cursor-pointer border-b border-slate-300
+}
+
+.shortcut-style:hover {
+    @apply bg-blue-200
+}
+
+.active-shortcut-style {
+    @apply flex flex-row items-center justify-between h-[40px] px-2 cursor-pointer border-b border-slate-300 bg-blue-200;
+}
